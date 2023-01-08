@@ -14,11 +14,13 @@ format:
 categories:
   final_project_601
 ---
+
+```{=html}
 <style>
 body {
 text-align: justify}
 </style>
-
+```
 ```{r}
 #| label: setup
 #| warning: false
@@ -173,7 +175,8 @@ df_crime_rate
 
 ## Analysis
 
-### Finding which county has the highest crime rate 
+### Finding which county has the highest crime rate
+
 When I analysed the county wise crime rate, Hampden (5783) came out to be the top county in crime rate followed by Suffolk (5511) and Nantucket (4066) in the year 2021. Norfolk had the least crime rate (2186)
 
 ```{r}
@@ -242,7 +245,7 @@ df_crime_rate %>%
 
 ```
 
-As expected, Hampden (14.3%) and Suffolk (16.5%) had a higher rate of poverty but surprisingly, Nantucket has the lowest poverty rate (5.3%) even though Nantucket is in the top three counties in crime rate. However, Nantucket had the highest unemployment rate (11.1%) followed by Hampden (11.0%). Suffolk too had a comparatively higher unemployment rate (10.3%). When it comes to the percentage of young males of age 18-29, Hampshire is the top county regardless of its lower crime rate. But Suffolk and Hampden has some correlation between the crime rate and the percentage of young male. Hampden and Suffolk are having their median household income at $61600 and $85221 respectively which are lower than that of median household income of the Massachusetts state($89,026). 
+As expected, Hampden (14.3%) and Suffolk (16.5%) had a higher rate of poverty but surprisingly, Nantucket has the lowest poverty rate (5.3%) even though Nantucket is in the top three counties in crime rate. However, Nantucket had the highest unemployment rate (11.1%) followed by Hampden (11.0%). Suffolk too had a comparatively higher unemployment rate (10.3%). When it comes to the percentage of young males of age 18-29, Hampshire is the top county regardless of its lower crime rate. But Suffolk and Hampden has some correlation between the crime rate and the percentage of young male. Hampden and Suffolk are having their median household income at \$61600 and \$85221 respectively which are lower than that of median household income of the Massachusetts state(\$89,026).
 
 ```{r}
 
@@ -253,6 +256,7 @@ crimerate_reasons %>%
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1 )) +
   ggtitle("Causes of Increased Crime Rate")
 ```
+
 ```{r}
 medianhh %>%
   ggplot(aes(x = County, y = median_hh_income, fill = median_hh_income)) +
@@ -261,7 +265,6 @@ medianhh %>%
   ggtitle("Countywise Median Household Income")
 
 ```
-
 
 ## Conclusion
 
